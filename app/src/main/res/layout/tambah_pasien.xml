@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tambah_pasien"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSubBackground"
+    tools:context=".TambahPasien">
+    <TextView
+        android:id="@+id/txJudul"
+        android:text="Form Pasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutname"
+    android:layout_below="@+id/txJudul"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/txJudul"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_face_24"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama "
+        android:padding="16dp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutalamat"
+        android:layout_below="@+id/layoutname"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alamat"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:padding="16dp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutnohp"
+        android:layout_below="@+id/layoutalamat"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nohp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/nohp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No Hp"
+            android:layout_below="@+id/layoutalamat"
+            android:inputType="number"
+            android:padding="16dp" />
+        </LinearLayout>
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutnohp"
+        android:padding="20dp" >
+        <TextView
+            android:id="@+id/gender_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:textColor="#000"
+            android:paddingLeft="16dp"/>
+        <RadioButton
+            android:id="@+id/Pria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorMain"
+            android:text="Pria"/>
+        <RadioButton
+            android:id="@+id/Wanita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wanita"
+            android:buttonTint="@color/colorMain" />
+        <EditText
+            android:id="@+id/gender1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No Hp"
+            android:layout_below="@+id/layoutalamat"
+            android:padding="16dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutTglLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gender"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/tgl"
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:src="@drawable/tgllahir"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/tglLahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="dd/MM/yyyy"
+            android:padding="16dp"
+            android:text="" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutumur"
+        android:layout_below="@+id/layoutTglLahir"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/umur"
+            android:layout_gravity="center"/>
+
+        <EditText
+        android:id="@+id/umur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Umur"
+        android:inputType="number"
+        android:padding="16dp"
+        android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutumur"
+        android:text="SIMPAN"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/cencel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simpan"
+        android:text="CENCEL"
+        android:background="@color/colorAccent"/>
+
+</RelativeLayout>

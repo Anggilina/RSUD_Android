@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSubBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:orientation="horizontal"
+        android:padding="16.80dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="90dp"
+            android:layout_height="109dp"
+            android:src="@drawable/obat" />
+
+        <LinearLayout
+            android:layout_width="217dp"
+            android:layout_height="109dp"
+            android:orientation="vertical"
+            android:padding="19dp">
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/nama_obat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nama"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stock"
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:text="stock"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/satuan"
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:text="satuan"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tglKadaluarsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Kadaluarsa"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="harga"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
